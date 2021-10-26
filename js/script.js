@@ -4,3 +4,6 @@ let pokemonList = [
   {name = 'Lapras', height = 2.5, type = ['Ice', 'Water']},
   {name = 'Palkia', height = 4.2, type = ['Water', 'Dragon']},
 ]
+
+for (let i=0, i < pokemonList.name, i++);
+  document.log(pokemonlist.name && pokemonList.height);
