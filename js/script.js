@@ -6,7 +6,7 @@ let pokemonList = [
 ]
 
 document.write('<ul>')
-for (let i = 0; i < pokemonList.legth; i++) {
+for (let i = 0; i < pokemonList.length; i++) {
   document.write('<li>')
-  document.write(pokemonList[i].name);
+  document.write(pokemonList[i].name + );
 }
