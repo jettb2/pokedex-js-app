@@ -5,5 +5,6 @@ let pokemonList = [
   {name = 'Palkia', height = 4.2, type = ['Water', 'Dragon']},
 ]
 
-for (let i=0, i < pokemonList.name, i++);
-  document.log(pokemonlist.name && pokemonList.height);
+for (let i = 0; i < pokemonList.legth; i++) {
+  document.write(pokemonList[i].name);
+}
