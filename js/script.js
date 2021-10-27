@@ -22,6 +22,8 @@ let repository = [
 ];
 
 for (let i = 0; i < repository.length; i++) {
+  var element = document.createElement('div')
+  document.body.appendChild(element)
     document.write(repository[i].name + ' Height: ' + repository[i].height +'m');
     if (repository[i].height > 4) {
       document.write(' - Wow that\'s a big Pokemon!');
