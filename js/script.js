@@ -1,31 +1,33 @@
 let repository = [
   {
-    name: ' Bulbasaur',
+    name: 'Bulbasaur',
     height: 0.7,
     type: ['Grass','Poison']
   },
   {
-    name: ' Squirtle',
+    name: 'Squirtle',
     height: 0.5,
     type: ['Water']
   },
   {
-    name: ' Lapras',
+    name: 'Lapras',
     height: 2.5,
     type: ['Ice', 'Water']
   },
   {
-    name: ' Palkia',
+    name: 'Palkia',
     height: 4.2,
     type: ['Water', 'Dragon']
   }
 ];
 
+//loop through Pokemon
 for (let i = 0; i < repository.length; i++) {
+//writes each Pokemon name on a different line
   var element = document.createElement('div')
-  document.body.appendChild(element)
-    document.write(repository[i].name + ' Height: ' + repository[i].height +'m');
-    if (repository[i].height > 4) {
-      document.write(' - Wow that\'s a big Pokemon!');
+    document.body.appendChild(element)
+      document.write(repository[i].name + ' Height: ' + repository[i].height +'m');
+      if (repository[i].height > 4) {
+        document.write(' - Wow that\'s a big Pokemon!');
     }
 }
