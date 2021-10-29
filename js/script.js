@@ -23,12 +23,21 @@ let repository = [
 ];
 
 //loop through Pokemon
-for (let i = 0; i < repository.length; i++) {
+//for (let i = 0; i < repository.length; i++) {
 //writes each Pokemon name on a different line
-  var element = document.createElement('div')
+  /*var element = document.createElement('div')
     document.body.appendChild(element)
       document.write(repository[i].name + ' Height: ' + repository[i].height +'m');
       if (repository[i].height > 4) {
         document.write(' - Wow that\'s a big Pokemon!');
     }
+}
+*/
+
+for (let i = 0; i < repository.length; i++) {
+  if (repository[i].height > 4) {
+    document.write("</br>" + repository[i].name + " " + repository[i].height + " -" + "Wow Thats Big");
+  } else {
+    document.write("</br>" + repository[i].name + " " + repository[i].height);
+  }
 }
