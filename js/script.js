@@ -21,13 +21,17 @@ let repository = [
     type: ['Water', 'Dragon']
   }
 ];
-
+function printArrayDetails (){
 //loop through Pokemon
 for (let i = 0; i < repository.length; i++) {
-//writes each Pokemon name on a different line  
+//writes each Pokemon name on a different line
   if (repository[i].height > 4) {
     document.write("</br>" + repository[i].name + " " + repository[i].height + " -" + "Wow Thats Big");
   } else {
     document.write("</br>" + repository[i].name + " " + repository[i].height);
+    }
   }
 }
+
+printArrayDetails();
+printArrayDetails();
