@@ -1,3 +1,4 @@
+//Array for Pokemon names, height and type
 let repository = [
   {
     name: 'Bulbasaur',
