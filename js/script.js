@@ -1,5 +1,5 @@
 //Array for Pokemon names, height and type
-let repository = [
+let pokemonList = [
   {
     name: 'Bulbasaur',
     height: 0.7,
@@ -21,17 +21,18 @@ let repository = [
     type: ['Water', 'Dragon']
   }
 ];
-function printArrayDetails (){
+
+function printArrayDetails(list) {
 //loop through Pokemon
-for (let i = 0; i < repository.length; i++) {
+for (let i = 0; i < pokemonList.length; i++) {
 //writes each Pokemon name on a different line
-  if (repository[i].height > 4) {
-    document.write("</br>" + repository[i].name + " " + repository[i].height + " -" + "Wow Thats Big");
+  if (pokemonList[i].height > 4) {
+    document.write("</br>" + pokemonList[i].name + " " + pokemonList[i].height + " -" + "Wow Thats Big");
   } else {
-    document.write("</br>" + repository[i].name + " " + repository[i].height);
+    document.write("</br>" + pokemonList[i].name + " " + pokemonList[i].height);
     }
   }
 }
 
 printArrayDetails();
-printArrayDetails();
+//printArrayDetails();
