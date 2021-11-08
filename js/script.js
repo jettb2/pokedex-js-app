@@ -23,13 +23,18 @@ let pokemonRepository = (function () {
     }
 ];
 
-function getAll() {
+  function getAll() {
       return pokemonList;
       }
 
     function add(pokemon) {
       pokemonList.push(pokemon);
     }
+
+  return {
+    add: add,
+    getAll: getAll
+  };
 
 })();
 
