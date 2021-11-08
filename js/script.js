@@ -38,11 +38,10 @@ let pokemonRepository = (function () {
 
 })();
 
-function printArrayDetails(list) {
-  pokemonList.forEach(function(getAll) {
+  pokemonRepository.getAll().forEach(function(pokemon) {
     document.write("<br>" + pokemon.name + " " + pokemon.height + "m" + " ");
   })
-}
+
 
 
 //printArrayDetails();
