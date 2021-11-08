@@ -23,16 +23,13 @@ let pokemonList = [
 ];
 
 function printArrayDetails(list) {
-//loop through Pokemon
-for (let i = 0; i < pokemonList.length; i++) {
-//writes each Pokemon name on a different line
-  if (pokemonList[i].height > 4) {
-    document.write("</br>" + pokemonList[i].name + " " + pokemonList[i].height + " -" + "Wow Thats Big");
-  } else {
-    document.write("</br>" + pokemonList[i].name + " " + pokemonList[i].height);
-    }
-  }
+  pokemonList.forEach(function(getAll) {
+    document.write("<br>" + pokemon.name + " " + pokemon.height + "m" + " ");
+  })
 }
 
+
 printArrayDetails();
+/*the printArrayDetails below can be used to either print array details again or if there is another array, print those details
+inbetween the ()*/
 //printArrayDetails();
