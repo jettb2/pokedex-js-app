@@ -39,7 +39,11 @@ let pokemonRepository = (function () {
 })();
 
   pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write("<br>" + pokemon.name + " " + pokemon.height + "m" + " ");
+    let listItem = document.createElement('li');
+    let button = document.createElement('button')
+    button.innerText = 'pokemonRepository.name';
+    button.classList.add()
+    document.querySelector('ul');
   })
 
 
