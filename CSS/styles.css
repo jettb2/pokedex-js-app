@@ -1,7 +1,10 @@
-.button {
-  background-color: red;
-  border: none;
+.button-class {
+  background-color: lightblue;
+  border: darkblue;
   color: white;
+  width: 300px;
+  height: 100px;
+  text-align: center;
 }
 
 li {
