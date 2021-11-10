@@ -39,13 +39,14 @@ let pokemonRepository = (function () {
 })();
 
   pokemonRepository.getAll().forEach(function(pokemon) {
+    let pokemonList = document.querySelector('.pokemon-list')
     let listItem = document.createElement('li');
     let button = document.createElement('button')
-    button.innerText = 'pokemonRepository.name';
-    button.classList.add('arrayButton')
+    button.innerText = pokemon.name;
+    button.classList.add('arrayButton-class')
     document.querySelector('ul');
     listItem.appendChild(button);
-    pokemon-list.appendChild(listItem)
+    pokemonList.appendChild(listItem)
   })
 
 
