@@ -27,21 +27,27 @@ let pokemonRepository = (function () {
       return pokemonList;
       }
 
-    function add(pokemon) {
-      pokemonList.push(pokemon);
-    }
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
 
 
   function addListItem(pokemon) {
-  let pokemonList = document.querySelector('.pokemon-list')
-  let listItem = document.createElement('li');
-  let button = document.createElement('button')
-  button.innerText = pokemon.name;
-  button.classList.add('button-class')
-  document.querySelector('ul');
-  listItem.appendChild(button);
-  pokemonList.appendChild(listItem)
+    let pokemonList = document.querySelector('.pokemon-list')
+    let listItem = document.createElement('li');
+    let button = document.createElement('button')
+    button.innerText = pokemon.name;
+    button.classList.add('button-class')
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem)
+    button.addEventListener('click', function (showDetails) {
+      console.log(showDetails);
+    })
   };
+
+  function showDetails(pokemon) {
+    console.log();
+  }
 
   return {
     add: add,
