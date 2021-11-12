@@ -41,13 +41,13 @@ let pokemonRepository = (function () {
     listItem.appendChild(button);
     pokemonList.appendChild(listItem)
     button.addEventListener('click', function (showDetails) {
-      console.log(showDetails);
+      console.log(pokemon);
     })
   };
 
-  function showDetails(pokemon) {
-    console.log();
-  }
+function showDetails(pokemon) {
+  console.log(pokemon);
+}
 
   return {
     add: add,
