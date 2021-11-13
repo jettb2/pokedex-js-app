@@ -1,27 +1,7 @@
 //Array for Pokemon names, height and type
 let pokemonRepository = (function () {
-  let pokemonList = [
-    {
-      name: 'Bulbasaur',
-      height: 0.7,
-      type: ['Grass','Poison']
-    },
-    {
-      name: 'Squirtle',
-      height: 0.5,
-      type: ['Water']
-    },
-    {
-      name: 'Lapras',
-      height: 2.5,
-      type: ['Ice', 'Water']
-    },
-    {
-      name: 'Palkia',
-      height: 4.2,
-      type: ['Water', 'Dragon']
-    }
-];
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function getAll() {
       return pokemonList;
@@ -54,15 +34,8 @@ function showDetails(pokemon) {
     getAll: getAll,
     addListItem: addListItem
   };
-  // function addListItem() {
-  //   return pokemon
-  // };
-  //
-  // return {
-  // addListItem: addListItem;
-  // };
-
 })();
+
 
   pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
