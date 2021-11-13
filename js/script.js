@@ -41,6 +41,19 @@ function loadList() {
   })
 }
 
+function loadDetails(item) {
+  let url = item.detailsUrl;
+  return fetch(url).then(function(reponse) {
+    return response.json();
+  }).then(function(details)
+      item.image = details.sprites.front_default;
+      item.height = details.height;
+      item.types = details.types;
+  }).catch(function(e) {
+      console.error(e);
+  });
+}
+
 function showDetails(pokemon) {
   console.log(pokemon);
 }
@@ -49,7 +62,8 @@ function showDetails(pokemon) {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
-    loadList: loadList
+    loadList: loadList,
+    loadDetails: loadDetails
   };
 })();
 
