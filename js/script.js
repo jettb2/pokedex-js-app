@@ -54,17 +54,20 @@ function loadDetails(item) {
   });
 }
 
-function showDetails(pokemon) {
-  console.log(pokemon);
+function showDetails(item) {
+pokemonRepository.loadDetails(item).then(function()) {
+    console.log(item);
+  });
 }
 
-  return {
-    add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    loadList: loadList,
-    loadDetails: loadDetails
-  };
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem,
+  loadList: loadList,
+  loadDetails: loadDetails
+};
+
 })();
 
 pokemonRepository.loadList().then(function() {
