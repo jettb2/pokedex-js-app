@@ -53,9 +53,9 @@ function loadDetails(item) {
   });
 }
 
-function showDetails(item) {
-pokemonRepository.loadDetails(item).then(function() {
-    console.log(item);
+function showDetails(pokemon) {
+pokemonRepository.loadDetails(pokemon).then(function() {
+    console.log(pokemon);
   });
 }
 
