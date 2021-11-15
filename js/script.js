@@ -26,7 +26,7 @@ function addListItem(pokemon) {
 };
 
 function loadList() {
-  return fetch(apiUrl).then(function(response){
+  return fetch(apiUrl).then(function(response) {
     return response.json();
   }).then(function(json) {
     json.results.forEach(function(item) {
@@ -34,7 +34,7 @@ function loadList() {
         name: item.name,
         deailtsUrl: item.url
       };
-    add: pokemon();
+      add(pokemon);
     });
   }).catch(function(e) {
     console.error(e)
@@ -45,7 +45,7 @@ function loadDetails(item) {
   let url = item.detailsUrl;
   return fetch(url).then(function(reponse) {
     return response.json();
-  }).then(function(details)
+  }).then(function(details) {
       item.image = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
