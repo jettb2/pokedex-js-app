@@ -1,4 +1,3 @@
-//Array for Pokemon names, height and type
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -75,10 +74,3 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
-
-
-
-//printArrayDetails();
-/*the printArrayDetails below can be used to either print array details again or if there is another array, print those details
-inbetween the ()*/
-//printArrayDetails();
