@@ -1,3 +1,8 @@
+.pokemon-button {
+  background color: lightblue;
+  color: black;
+}
+
 li {
   list-style-type: none;
   padding-top: 5px;
