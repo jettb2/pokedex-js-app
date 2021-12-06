@@ -12,29 +12,29 @@ let pokemonRepository = (function () {
 
  let modalContainer = document.querySelector('#modal-container');
   function showModal(pokemon) {
-    modalContainer.innerHTML = '';
-    let modal = document.createElement('div');
-    modal.classList.add('modal');
+   // Clear all existing modal content
+    let modalBody = $('.modal-body');
+    let modalTitle = $('.modal-title');
+    let modalHeader = $('.modal-header');
+    modalTitle.empty();
+    modalBody.empty();
 
-    let closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
-    closeButtonElement.innerText = 'Close';
-    closeButtonElement.addEventListener('click', hideModal);
+    // Create new content
+    let nameElement = $('<h1>' + pokemon.name + '</h1>');
+    let imageElement = $('<img class="modal-img" style="width:50%"> alt=""');
+    imageElement.attr('src', pokemon.imageUrl);
+    let heightElement = $('<p>' + 'Height : ' + pokemon.height + ' m' + '</p>');
+    let weightElement = $(
+      '<p>' + 'Weight : ' + pokemon.weight + ' kg' + '</p>'
+    );
+    let typesElement = $('<p>' + 'Type(s): ' + pokemon.types);
 
-    let titleElement = document.createElement('h1');
-    titleElement.innerText = pokemon.name;
-    titleElement.style.textTransform = 'uppercase';
+    modalTitle.append(nameElement);
+    modalBody.append(imageElement);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
+    modalBody.append(typesElement);
 
-    let contentElement = document.createElement('p');
-    contentElement.innerText = ('Height: ') + pokemon.height;
-
-    let imgElement = document.createElement('img');
-    imgElement.src = pokemon.image;
-
-    modal.appendChild(closeButtonElement);
-    modal.appendChild(titleElement);
-    modal.appendChild(contentElement);
-    modal.appendChild(imgElement);
     // modalContainer.appendChild(modal);
 
     pokemon.types.forEach(item => {
@@ -78,7 +78,7 @@ function addListItem(pokemon) {
   listItem.classList.add('group-list-item');
   button.setAttribute('data-target', '#targtModal');
     listItem.appendChild(button);
-  pokemonList.appendChild(listItem)
+    pokemonList.appendChild(listItem)
     button.addEventListener('click', function () {
     showDetails(pokemon);
     })
