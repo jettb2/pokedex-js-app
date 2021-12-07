@@ -22,7 +22,7 @@ let pokemonRepository = (function () {
     // Create new content
     let nameElement = $('<h1>' + pokemon.name + '</h1>');
     let imageElement = $('<img class="modal-img" style="width:50%"> alt=""');
-    imageElement.setAttributeattr('src', pokemon.imageUrl);
+    imageElement.attr('src', pokemon.imageUrl);
     let heightElement = $('<p>' + 'Height : ' + pokemon.height + ' m' + '</p>');
     let weightElement = $(
       '<p>' + 'Weight : ' + pokemon.weight + ' kg' + '</p>'
@@ -105,7 +105,7 @@ function loadDetails(item) {
   return fetch(url).then(function(response) {
     return response.json();
   }).then(function(details) {
-      item.image = details.sprites.front_default;
+      item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
       item.weight = details.weight;
