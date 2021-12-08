@@ -8,10 +8,12 @@
   cursor: pointer;
 }
 
-li {
-  list-style-type: none;
-  padding-top: 5px;
+.list-group {
   margin-left: -40px;
+}
+
+.group-list-item {
+  padding-top: 5px;
 }
 
 #modal-container {
