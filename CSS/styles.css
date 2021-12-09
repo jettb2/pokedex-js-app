@@ -6,14 +6,16 @@
   height: 100px;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 5px;
+}
+.pokemoj-list {
+  display: inline;
+  padding-right: 5px;
 }
 
-.list-group {
-  margin-left: -40px;
-}
-
-.group-list-item {
-  padding-top: 5px;
+li {
+  display: inline;
+  padding-right: 15px;
 }
 
 #modal-container {
