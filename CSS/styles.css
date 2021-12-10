@@ -41,7 +41,6 @@ li {
 
 .modal {
   margin: auto;
-  display: inline-block;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.62);
   padding: 15px;
