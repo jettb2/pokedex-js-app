@@ -2,6 +2,10 @@
   background-color: #284b72;
 }
 
+.title-color {
+  color: white;
+}
+
 .pokemon-button {
   background-color: lightblue;
   border: darkblue;
