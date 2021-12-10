@@ -20,6 +20,12 @@
     color: rgb(161 164 167);
 }
 
+.list-group {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .pokemon-button {
   background-color: lightblue;
   border: darkblue;
@@ -30,9 +36,9 @@
   cursor: pointer;
   margin-bottom: 5px;
   border-radius: 75%;
+  text-transform: capitalize;
 }
 .pokemon-list {
-  display: inline;
   padding-right: 5px;
 }
 
