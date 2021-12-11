@@ -135,3 +135,16 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+document.getElementById('search-term').addEventListener('input', e => {
+  let searchTerm = e.target.value;
+  let buttons = document.querySelectorAll('.pokemon-button')
+  for(let i = 0; i < buttons.length; i++) {
+  let button = buttons[i];
+  if(button.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
+    button.parentNode.style.display = 'inline';
+  } else {
+    button.parentNode.style.display = 'none';
+  }
+}
+})
